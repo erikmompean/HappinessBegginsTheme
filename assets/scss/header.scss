@@ -1,0 +1,55 @@
+@import 'root.scss';
+
+$selectedColor : #5391bb;
+
+body {
+    background-color: $backgroundColor;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+}
+
+.site-logo {
+    height: 200px;
+    width: 350px;
+    padding: 30px 0;
+}
+
+nav.menu-principal {
+    display: inline-flex;
+    width: 100%;
+}
+
+.menu-principal ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.menu-principal li {
+    display: inline-flex;
+    font-family: $mainFont;
+    padding: 0 10px;
+
+}
+
+.menu-principal li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu {
+    align-items: center;
+}
+
+@media (min-width : 786px) {
+    .menu-principal ul {
+        justify-content: center;
+    }
+}
+
+li.current_page_item {
+    border-bottom: 3px solid $selectedColor;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,22 @@
+
+
+.wedding {
+    background-image:linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url("../images/wedding-background.jpeg");
+    padding: 40px 0;
+    margin-top: 40px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .types {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+
+        .card{
+            flex: 0 0 calc(33% - 20px);
+            padding:8px;
+        }
+    }
+}

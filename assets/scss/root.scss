@@ -1,0 +1,39 @@
+$mainFont: 'Commissioner', sans-serif;
+$secondaryFont: 'Piazzolla', serif;
+$backgroundColor: #f2f3f5;
+$secondaryColor: #2d3d51;
+$primaryColor : #5391bb;
+.main-font {
+    font-family: $mainFont;
+}
+
+.secondary-font {
+    font-family: $secondaryFont;
+}
+
+/** Utilidades **/
+.container {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 1200px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.primary-color {
+    color: $primaryColor;
+}
+
+.secondary-color {
+    color: $secondaryColor;
+}
