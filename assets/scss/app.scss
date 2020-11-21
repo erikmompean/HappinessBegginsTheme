@@ -2,6 +2,7 @@
 @import 'header.scss';
 @import 'front-page.scss';
 @import 'wedding.scss';
+@import 'contact-us.scss';
 @import 'footer.scss';
 @import 'cards.scss';
 
@@ -11,3 +12,12 @@ ul {
     padding: 0;
 }
 
+.post-container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+    }
+}

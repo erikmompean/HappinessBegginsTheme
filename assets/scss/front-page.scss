@@ -48,17 +48,16 @@
             flex: 2;
             width: 100%;
         }
-        .card {
+        .simple-card {
             flex: 0 0 calc(33% - 20px);
             
         }
 
-        .card:not(:first-child :last-child) {
+        .simple-card:not(:first-child :last-child) {
             margin: 20px 0px;
-            
         }
-        /*
-        .card{
+        
+        .simple-card {
             flex: 0 0 calc(33% - 20px);
             img {
                 position: relative;
@@ -87,7 +86,7 @@
                 border-radius: 5px;
             }
         }
-           */
+           
     }
  
 

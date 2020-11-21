@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 .effect {
   text-align: center;
   display: inline-block;
@@ -316,47 +315,42 @@ li.current_page_item {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  /*
-  .card{
-      flex: 0 0 calc(33% - 20px);
-      img {
-          position: relative;
-          width: 25%;
-          padding-bottom: 25%;
-          object-fit: cover;
-      margin: 0 auto;
-
-      }
-
-  .image {
-      background-position: center center;
-      background-repeat: no-repeat;
-      width: 90%;
-      padding-bottom: 90%;
-      object-fit: fill;
-      }
-
-      button {
-          font-family: $mainFont;
-          margin-top: 30px;
-          background-color: $primaryColor;
-          font-size: 22px;
-          padding: 12px;
-          max-width: 120px;
-          border-radius: 5px;
-      }
-  }
-     */
 }
 .front-page .types h1 {
   flex: 2;
   width: 100%;
 }
-.front-page .types .card {
+.front-page .types .simple-card {
   flex: 0 0 calc(33% - 20px);
 }
-.front-page .types .card:not(:first-child :last-child) {
+.front-page .types .simple-card:not(:first-child :last-child) {
   margin: 20px 0px;
+}
+.front-page .types .simple-card {
+  flex: 0 0 calc(33% - 20px);
+}
+.front-page .types .simple-card img {
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+.front-page .types .simple-card .image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 90%;
+  padding-bottom: 90%;
+  object-fit: fill;
+}
+.front-page .types .simple-card button {
+  font-family: "Commissioner", sans-serif;
+  margin-top: 30px;
+  background-color: #5391bb;
+  font-size: 22px;
+  padding: 12px;
+  max-width: 120px;
+  border-radius: 5px;
 }
 
 .wedding {
@@ -374,7 +368,7 @@ li.current_page_item {
   justify-content: center;
   text-align: center;
 }
-.wedding .types .card {
+.wedding .types .simple-card {
   flex: 0 0 calc(33% - 20px);
   padding: 8px;
 }
@@ -442,20 +436,9 @@ li.current_page_item {
   --font-serif: "Cardo", serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  display: grid;
-  place-items: center;
-}
-
 .page-content {
+  height: 100%;
+  box-sizing: border-box;
   display: grid;
   grid-gap: 1rem;
   padding: 1rem;
@@ -470,7 +453,7 @@ body {
 }
 @media (min-width: 800px) {
   .page-content {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -480,7 +463,7 @@ body {
   align-items: flex-end;
   overflow: hidden;
   padding: 1rem;
-  width: 100%;
+  width: 90%;
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
@@ -516,17 +499,18 @@ body {
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
 }
-.card:nth-child(1):before {
-  background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+
+.wedding-card {
+  background-position: center;
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(245, 246, 252, 0.2)), url("../images/wedding.jpg");
 }
-.card:nth-child(2):before {
-  background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+
+.social-event {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(117, 19, 93, 0.4)), url("../images/evento-social.jpeg");
 }
-.card:nth-child(3):before {
-  background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-}
-.card:nth-child(4):before {
-  background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+
+.enterprise-event {
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(204, 204, 153, 0.8)), url("../images/entrepreneur.png");
 }
 
 .content {
@@ -623,6 +607,15 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.post-container {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+.post-container h1 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */
